@@ -4,20 +4,16 @@ $(function(){
 //creazioni variabili
 var rightBtn = $('div.next');
 var firstImg = $('div.images img.first');
+var lastImg = $('div.images img.last');
 $(rightBtn).click(function () { 
     firstImg = firstImg.next();
-    console.log(firstImg);
-    // $('.images img.first').next().addClass('active');
-    $('.images img.first').removeClass('active');
-    // if (firstImg.hasClass('active')) {
-    //     firstImg.removeClass('active');
-    // } else {
-    //     firstImg.addClass('active');
-    // }
+    $('.images img').removeClass('active');
+    if (!firstImg.hasClass('active')) {
+        firstImg.addClass('active');
+    } else {
+        firstImg.removeClass('active');
+    }
+  
 
-
-
-    // console.log($('div.images img.first').
-    console.log('click');
 });
 });
